@@ -1,0 +1,12 @@
+id: steel
+name: steel
+version: 1.0.1
+author: qt
+icon: ''
+desc: steel
+files:
+  - app.yaml
+  - best_yolo11_npu.axmodel
+  - best_yolo11_vnpu.axmodel
+  - best_yolo11.mud
+  - main.py
