@@ -11,7 +11,7 @@
  * 移植说明 (适配 MSPM0G3507 当前工程):
  *   原模块依赖 SysConfig 生成的 ENCODERA/ENCODERB GPIO 组宏,
  *   本工程 SysConfig 未配置编码器引脚, 因此改为手动配置引脚
- *   (与 wireless_uart.c 风格一致, 重新生成 ti_msp_dl_config 不影响本模块)。
+ *   (手动配置引脚, 不依赖 SysConfig 生成, 重新生成 ti_msp_dl_config 不影响本模块)。
  *
  * 硬件接线 (与工程原有 encoder.c 一致):
  *   右轮编码器: A相=PA16 (PINCM38), B相=PA15 (PINCM37)  -> GPIOA

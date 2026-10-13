@@ -918,7 +918,9 @@ static void updateDisplay(const LineTracker_State *line, int8_t left, int8_t rig
  *   - 步进电机驱动: UART2 (PB15=TX, PB16=RX, 115200)
  *   - OLED: I2C (SCL=PA31, SDA=PA28)
  *   - 按键: S1=PA25, S2=PA26, S3=PB23, S4=PA29
- * 模式切换: S2按键 TRACK -> DRIVE1(驱动1) -> AB -> TRACK50 -> REMOTE -> TRACK */
+ * 模式切换: S2按键循环 TRACK -> HFZERO -> ZERO -> +5>-5 -> DRIVE1 -> HOLD6
+ *   -> 006 -> 007 -> 5NEW -> 006(1) -> AB -> AB20 -> ABCD -> TRACK50 -> REMOTE -> TRACK
+ *   (完整说明见 docs/task-mode-map.md) */
 int main(void)
 {
     LineTracker_State line = {0U, 0, 0U};

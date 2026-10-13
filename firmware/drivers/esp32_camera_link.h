@@ -5,7 +5,7 @@
  *
  * 移植自官方 05_UART 例程 (Yahboom ESP32-WiFi 图传模块),
  * 按当前工程风格改为自包含模块:
- *   - UART1 + PB6/PB7 手动配置 (与 wireless_uart.c 一致, 不依赖 SysConfig)
+ *   - UART0 + PA10/PA11 手动配置 (不依赖 SysConfig)
  *   - 延时使用工程 Delay.h 的 Delay_ms
  *   - 去掉官方代码中对 uart0 调试串口的依赖, 查询结果存入内部缓冲供读取
  *
@@ -37,7 +37,7 @@
 #define ESP_RX_IOMUX             IOMUX_PINCM22              /* PA11 = UART0_RX */
 #define ESP_RX_IOMUX_FUNC        IOMUX_PINCM22_PF_UART0_RX
 
-/* 波特率: 115200 @BUSCLK 32MHz (与 wireless_uart/gyro 相同配置) */
+/* 波特率: 115200 @BUSCLK 32MHz */
 #define ESP_BAUD_IBRD            17U
 #define ESP_BAUD_FBRD            23U
 
